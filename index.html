@@ -8,9 +8,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Welcome to My Web App</h1>
-  <h2>Test</h2>
-  <h3>Test2</h3>
   <p>This is a simple web app that can be installed on any device!</p>
       <h2>Enter WAV Filename and Play</h2>
 
@@ -34,5 +31,15 @@
             }
         }
     </script>
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+      console.log('Service Worker registered with scope:', registration.scope);
+    }).catch(function(error) {
+      console.log('Service Worker registration failed:', error);
+    });
+  }
+</script>
+
 </body>
 </html>
