@@ -1,0 +1,21 @@
+/* Portrait mode */
+@media screen and (orientation: portrait) {
+  body {
+    background-color: lightblue;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
+
+/* Landscape mode */
+@media screen and (orientation: landscape) {
+  body {
+    background-color: lightgreen;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+}
