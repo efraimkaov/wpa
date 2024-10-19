@@ -12,5 +12,27 @@
   <h2>Test</h2>
   <h3>Test2</h3>
   <p>This is a simple web app that can be installed on any device!</p>
+      <h2>Enter WAV Filename and Play</h2>
+
+    <label for="wavFile">WAV Filename:</label>
+    <input type="text" id="wavFile" placeholder="Enter file name (e.g., sound.wav)">
+    <br><br>
+    <button onclick="playWav()">Play</button>
+    <br><br>
+    <audio id="audioPlayer" controls></audio>
+
+    <script>
+        function playWav() {
+            const fileName = document.getElementById('wavFile').value;
+            const audioPlayer = document.getElementById('audioPlayer');
+            
+            if(fileName) {
+                audioPlayer.src = fileName;
+                audioPlayer.play();
+            } else {
+                alert("Please enter a valid WAV filename.");
+            }
+        }
+    </script>
 </body>
 </html>
