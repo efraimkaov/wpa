@@ -1,0 +1,223 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+
+body {
+  height: 100dvh;
+  width: 100dvw;
+}
+
+/* Backgrounds */
+.bg-slate-500 {
+  background-color: #64748b;
+}
+
+.bg-sky-700 {
+  background-color: #0369a1;
+}
+
+.bg-red-700 {
+  background-color: #b91c1c;
+}
+
+.bg-teal-700 {
+  background-color: #0f766e;
+}
+
+.bg-lime-400 {
+  background-color: #a3e635;
+}
+
+.bg-emerald-400 {
+  background-color: #34d399;
+}
+
+.bg-sky-400 {
+  background-color: #38bdf8;
+}
+
+.bg-cyan-700 {
+  background-color: #0e7490;
+}
+
+.bg-cyan-900 {
+  background-color: #164e63;
+}
+
+.bg-emerald-700 {
+  background-color: #047857;
+}
+
+.bg-emerald-900 {
+  background-color: #064e3b;
+}
+
+.bg-fuchsia-400 {
+  background-color: #e879f9;
+}
+
+.bg-neutral-700 {
+  background-color: #404040;
+}
+
+.bg-neutral-800 {
+  background-color: #262626;
+}
+
+.bg-neutral-900 {
+  background-color: #171717;
+}
+
+/* Button */
+.btn {
+  cursor: pointer;
+}
+
+/* Borders */
+.rounded-1h {
+  border-radius: 1dvh;
+}
+
+/* Layout */
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+/* Flex */
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.flex-7 {
+  flex: 7;
+}
+
+/* Grid */
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-12 {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.grid-rows-2 {
+  grid-template-rows: repeat(2, minmax(0, 1fr));
+}
+
+.grid-rows-7 {
+  grid-template-rows: repeat(7, minmax(0, 1fr));
+}
+
+.col-span-1 {
+  grid-column: span 1 / span 1;
+}
+
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
+.gap-x-2w {
+  column-gap: 2dvw;
+}
+
+.gap-y-2h {
+  row-gap: 2dvh;
+}
+
+/* Box alignment */
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+/* Spacing */
+.pb-1h {
+  padding-bottom: 1dvh;
+}
+
+.mx-2w {
+  margin-left: 2dvw;
+  margin-right: 2dvw;
+}
+
+.mt-0-5w {
+  margin-top: 0.5dvw;
+}
+
+.mr-0-5w {
+  margin-right: 0.5dvw;
+}
+
+.mb-2h {
+  margin-bottom: 2dvh;
+}
+
+.ml-0-5w {
+  margin-left: 0.5dvw;
+}
+
+/* Sizing */
+.w-full {
+  width: 100%;
+}
+
+.w-100w {
+  width: 100dvw;
+}
+
+.h-5-75h {
+  height: 5.75dvh;
+}
+
+.h-6-25h {
+  height: 6.25dvh;
+}
+
+.h-10-5h {
+  height: 10.5dvh;
+}
+
+.h-71-5h {
+  height: 71.5dvh;
+}
+
+.h-full {
+  height: 100%;
+}
+
+/* Typography */
+.font-bold {
+  font-weight: 700;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-neutral-400 {
+  color: #a3a3a3;
+}
