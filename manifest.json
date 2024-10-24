@@ -1,6 +1,7 @@
 {
   "name": "Byzantine Isokratima",
   "short_name": "BZI",
+  "version": "1.0.0",
   "start_url": "index.html",
   "display": "standalone",
   "orientation": "any",
