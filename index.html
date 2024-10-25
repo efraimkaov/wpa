@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WAV Cache Test</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="./manifest.json">
+    <script defer src="./app.js"></script>
 </head>
 <body>
     <h1>Play Cached WAV Files</h1>
@@ -13,17 +14,6 @@
     <button onclick="playAudio('b.wav')">Play b.wav</button>
 
     <script>
-        // Register the service worker
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/wpa/service-worker.js')
-                .then(function(registration) {
-                    console.log('Service Worker registered with scope:', registration.scope);
-                })
-                .catch(function(error) {
-                    console.log('Service Worker registration failed:', error);
-                });
-        }
-
         // Function to play audio
         function playAudio(file) {
             const audio = new Audio(file);
