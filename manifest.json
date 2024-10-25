@@ -1,13 +1,11 @@
 {
-  "name": "twenty48",
-  "short_name": "2048",
-  "id": "/wpa/",
-  "start_url": "/wpa/",
-  "display": "standalone",
-  "background_color": "#FFE9D2",
-  "theme_color": "#FFE1C4",
-  "orientation": "portrait-primary",
-  "icons": [
+    "name": "Offline WAV Cache",
+    "short_name": "WAVCache",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "icons": [
         {
             "src": "icon-192x192.png",
             "sizes": "192x192",
@@ -18,5 +16,5 @@
             "sizes": "512x512",
             "type": "image/png"
         }
-  ]
+    ]
 }
