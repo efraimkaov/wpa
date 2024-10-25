@@ -1,6 +1,6 @@
 
 // Change this to your repository name
-var GHPATH = '/github-page-pwa';
+var GHPATH = '/wpa';
 
 // Choose a different app prefix name
 var APP_PREFIX = 'gppwa_';
