@@ -1,7 +1,7 @@
 const CACHE_NAME = 'audio-cache-v1';
 const AUDIO_FILES = [
-    'a.wav',
-    'b.wav'
+    '/wpa/a.wav',
+    '/wpa/b.wav'
 ];
 
 // Install event - caches audio files
