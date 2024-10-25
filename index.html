@@ -13,19 +13,22 @@
     <button onclick="playAudio('b.wav')">Play b.wav</button>
 
     <script>
+                // Register the service worker
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('service-worker.js')
+                .then(function(registration) {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                })
+                .catch(function(error) {
+                    console.log('Service Worker registration failed:', error);
+                });
+        }
+        
         // Function to play audio
         function playAudio(file) {
             const audio = new Audio(file);
             audio.play();
         }
     </script>
-    <script>
-      if (navigator.serviceWorker) {
-        navigator.serviceWorker.register (
-          '/wpa/sw.js',
-          {scope: '/wpa/'}
-        )
-      }
-  </script>
 </body>
 </html>
