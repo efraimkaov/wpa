@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WAV Cache Test</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="manifest" href="./manifest.json">
-    <script defer src="./app.js"></script>
+<link rel="manifest" href="/wpa/manifest.webmanifest">
 </head>
 <body>
     <h1>Play Cached WAV Files</h1>
@@ -20,5 +19,13 @@
             audio.play();
         }
     </script>
+    <script>
+      if (navigator.serviceWorker) {
+        navigator.serviceWorker.register (
+          '/github-page-pwa/sw.js',
+          {scope: '/github-page-pwa/'}
+        )
+      }
+  </script>
 </body>
 </html>
