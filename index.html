@@ -6,8 +6,7 @@
     <title>WAV Cache Test2</title>
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="manifest" href="manifest.json">
-    <script defer src="app.js" crossorigin="anonymous"></script>
-    <script defer src="audio.js" crossorigin="anonymous"></script>
+    <script defer src="audio.js"></script>
 </head>
 <body>
     <h1>Play Cached WAV Files</h1>
@@ -29,5 +28,14 @@
     <audio preload="auto" crossorigin="anonymous">
         <source src="assets/b.mp3" type="audio/mpeg">
     </audio>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+        navigator.serviceWorker
+            .register("service-worker.js")
+            .then(() => console.log("Service Worker registered"))
+            .catch((error) => console.log("Service Worker registration failed:", error));
+        }
+    </script>
 </body>
 </html>
