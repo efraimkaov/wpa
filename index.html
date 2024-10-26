@@ -12,22 +12,19 @@
 <body>
     <h1>Play Cached WAV Files</h1>
     <button onclick="playAudio('assets/a.wav')">Play a.wav</button>
-    <button onclick="playAudio('assets/b.wav')">Play b.wav</button>
-    <button onclick="playAudio('assets/b.m4a')">Play b.m4a</button>
-    <button onclick="playAudio('assets/b.mp3')">Play b.mp3</button>
     <button onclick="playAudio('assets/b.ogg')">Play b.ogg</button>
-    <button onclick="playAudio('assets/b.wma')">Play b.wma</button>
+    <button onclick="playAudio('assets/b.mp3')">Play b.mp3</button>
 
-    <audio>
-        <source src="assets/b.wav" type="audio/wav">
+    <audio crossorigin="anonymous">
+        <source src="assets/a.wav" type="audio/wav" crossorigin="anonymous">
     </audio>
 
-    <audio>
-        <source src="assets/b.ogg" type="audio/ogg">
+    <audio crossorigin="anonymous">
+        <source src="assets/b.ogg" type="audio/ogg" crossorigin="anonymous">
     </audio>
 
-    <audio>
-        <source src="assets/b.mp3" type="audio/mpeg">
+    <audio crossorigin="anonymous">
+        <source src="assets/b.mp3" type="audio/mpeg" crossorigin="anonymous">
     </audio>
 </body>
 </html>
