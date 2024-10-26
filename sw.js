@@ -1,6 +1,5 @@
-const staticCacheName = 'site-static-v2'
-const dynamicCacheName = 'site-dynamic-v1'
-const assets = [
+const CACHE_NAME = "audio-cache-v1";
+const AUDIO_FILES = [
   '/wpa/',
   '/wpa/index.html',
   '/wpa/assets/styles.css',
@@ -8,61 +7,33 @@ const assets = [
   '/wpa/app.js',
   '/wpa/assets/a.wav',
   '/wpa/assets/b.wav'
-]
+];
 
-// cache size limit function
-const limitCacheSize = (name, size) => {
-  caches.open(name).then(cache => {
-    cache.keys().then(keys => {
-      if (keys.length > size) {
-        cache.delete(keys[0]).then(limitCacheSize(name, size))
-      }
+// Install event - pre-cache all audio files
+self.addEventListener("install", (event) => {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then((cache) => {
+      return cache.addAll(AUDIO_FILES);
     })
-  })
-}
+  );
+});
 
-// install event
-self.addEventListener('install', evt => {
-  //console.log('service worker installed')
-  evt.waitUntil(
-    caches.open(staticCacheName).then((cache) => {
-      console.log('caching shell assets')
-      cache.addAll(assets)
-    })
-  )
-})
-
-// activate event
-self.addEventListener('activate', evt => {
-  //console.log('service worker activated')
-  evt.waitUntil(
-    caches.keys().then(keys => {
-      //console.log(keys)
-      return Promise.all(keys
-        .filter(key => key !== staticCacheName && key !== dynamicCacheName)
-        .map(key => caches.delete(key))
-      )
-    })
-  )
-})
-
-// fetch event
-self.addEventListener('fetch', evt => {
-  //console.log('fetch event', evt)
-  evt.respondWith(
-    caches.match(evt.request).then(cacheRes => {
-      return cacheRes || fetch(evt.request).then(fetchRes => {
-        return caches.open(dynamicCacheName).then(cache => {
-          cache.put(evt.request.url, fetchRes.clone())
-          // check cached items size
-          limitCacheSize(dynamicCacheName, 15)
-          return fetchRes
+// Fetch event - serve cached files if available
+self.addEventListener("fetch", (event) => {
+  event.respondWith(
+    caches.match(event.request).then((cachedResponse) => {
+      return (
+        cachedResponse ||
+        fetch(event.request).then((response) => {
+          // Cache new requests if they're in the AUDIO_FILES list
+          if (AUDIO_FILES.includes(new URL(event.request.url).pathname)) {
+            caches.open(CACHE_NAME).then((cache) => {
+              cache.put(event.request, response.clone());
+            });
+          }
+          return response;
         })
-      })
-    }).catch(() => {
-      if (evt.request.url.indexOf('.html') > -1) {
-        return caches.match('/wpa/zindex.html')
-      }
+      );
     })
-  )
-})
+  );
+});
