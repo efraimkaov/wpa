@@ -1,11 +1,11 @@
 {
-  "name": "twenty48",
-  "short_name": "2048",
-  "id": "/wpa/",
-  "start_url": "/wpa/",
+  "name": "BZI",
+  "short_name": "bzi",
+  "id": "/",
+  "start_url": "/",
   "display": "standalone",
-  "background_color": "#FFE9D2",
-  "theme_color": "#FFE1C4",
+  "background_color": "#000000",
+  "theme_color": "#000000",
   "orientation": "portrait-primary",
     "icons": [
         {
