@@ -17,11 +17,13 @@
     <button onclick="playAudio('assets/b.mp3')">Play b.mp3</button>
     <button onclick="playAudio('assets/b.ogg')">Play b.ogg</button>
     <button onclick="playAudio('assets/b.wma')">Play b.wma</button>
-    <audio src="a.wav" crossorigin="anonymous"  controls></audio>
-    <audio src="b.wav" crossorigin="anonymous"></audio>
-    <audio src="b.m4a" crossorigin="anonymous"></audio>
-    <audio src="b.mp3" crossorigin="anonymous"></audio>
-    <audio src="b.ogg" crossorigin="anonymous"></audio>
-    <audio src="b.wma" crossorigin="anonymous"  controls>b.wma</audio>
+
+    <audio controls crossorigin="anonymous">
+        <source src="b.ogg" type="audio/ogg">
+    </audio>
+
+    <audio controls>
+        <source src="b.mp3" type="audio/mpeg">
+    </audio>
 </body>
 </html>
