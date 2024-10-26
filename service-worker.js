@@ -6,6 +6,10 @@ const AUDIO_FILES = [
   '/wpa/zindex.html',
   '/wpa/app.js',
   '/wpa/assets/a.wav',
+  '/wpa/assets/b.m4a',
+  '/wpa/assets/b.mp3',
+  '/wpa/assets/b.ogg',
+  '/wpa/assets/b.wma',
   '/wpa/assets/b.wav'
 ];
 
