@@ -18,22 +18,19 @@ self.addEventListener("install", (event) => {
   );
 });
 
-// Fetch event - serve cached files if available
 self.addEventListener("fetch", (event) => {
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
       return (
         cachedResponse ||
-        fetch(event.request).then((response) => {
-          // Cache new requests if they're in the AUDIO_FILES list
+        fetch(event.request).catch(() => {
+          // Fallback to cached audio if the user is offline and the file is in the cache
           if (AUDIO_FILES.includes(new URL(event.request.url).pathname)) {
-            caches.open(CACHE_NAME).then((cache) => {
-              cache.put(event.request, response.clone());
-            });
+            return caches.match(event.request);
           }
-          return response;
         })
       );
     })
   );
 });
+
