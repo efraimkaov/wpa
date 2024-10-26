@@ -1,4 +1,4 @@
-const CACHE_NAME = "audio-cache-v2";
+const CACHE_NAME = "audio-cache-v3";
 const AUDIO_FILES = [
   '/',
   '/index.html',
