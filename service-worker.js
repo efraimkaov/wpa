@@ -1,16 +1,16 @@
 const CACHE_NAME = "audio-cache-v1";
 const AUDIO_FILES = [
-  'https://efraimkaov.github.io//wpa/',
-  'https://efraimkaov.github.io//wpa/index.html',
-  'https://efraimkaov.github.io//wpa/assets/styles.css',
-  'https://efraimkaov.github.io//wpa/zindex.html',
-  'https://efraimkaov.github.io//wpa/app.js',
-  'https://efraimkaov.github.io//wpa/assets/a.wav',
-  'https://efraimkaov.github.io//wpa/assets/b.m4a',
-  'https://efraimkaov.github.io//wpa/assets/b.mp3',
-  'https://efraimkaov.github.io//wpa/assets/b.ogg',
-  'https://efraimkaov.github.io//wpa/assets/b.wma',
-  'https://efraimkaov.github.io//wpa/assets/b.wav'
+  '/',
+  '/index.html',
+  '/assets/styles.css',
+  '/zindex.html',
+  '/app.js',
+  '/assets/a.wav',
+  '/assets/b.m4a',
+  '/assets/b.mp3',
+  '/assets/b.ogg',
+  '/assets/b.wma',
+  '/assets/b.wav'
 ];
 
 // Install event - pre-cache all audio files
