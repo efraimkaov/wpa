@@ -2,9 +2,9 @@ const CACHE_NAME = 'audio-cache-v1';
 const AUDIO_FILES = [
     '/wpa/',
     '/wpa/index.html',
-    '/wpa/styles.css',
-    '/wpa/a.wav',
-    '/wpa/b.wav'
+    '/wpa/assets/styles.css',
+    '/wpa/assets/a.wav',
+    '/wpa/assets/b.wav'
 ];
 
 self.addEventListener('install', function(event) {
