@@ -1,8 +1,7 @@
 {
   "name": "BZI",
   "short_name": "bzi",
-  "id": "/",
-  "start_url": "/",
+  "start_url": "/wpa/",
   "display": "standalone",
   "background_color": "#000000",
   "theme_color": "#000000",
