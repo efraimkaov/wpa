@@ -18,11 +18,15 @@
     <button onclick="playAudio('assets/b.ogg')">Play b.ogg</button>
     <button onclick="playAudio('assets/b.wma')">Play b.wma</button>
 
-    <audio controls crossorigin="anonymous">
-        <source src="/wpa/assets/b.ogg" type="audio/ogg">
+    <audio>
+        <source src="assets/b.wav" type="audio/wav">
     </audio>
 
-    <audio controls>
+    <audio>
+        <source src="assets/b.ogg" type="audio/ogg">
+    </audio>
+
+    <audio>
         <source src="assets/b.mp3" type="audio/mpeg">
     </audio>
 </body>
