@@ -4,6 +4,7 @@ const assets = [
   '/wpa/',
   '/wpa/index.html',
   '/wpa/assets/styles.css',
+  '/wpa/zindex.html',
   '/wpa/app.js',
   '/wpa/assets/a.wav',
   '/wpa/assets/b.wav'
